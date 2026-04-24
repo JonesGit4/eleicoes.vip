@@ -39,11 +39,39 @@ const servicos = [
     preco: 'R$ 2.200',
   },
   {
+    icone: '👁️',
+    titulo: 'Social Listening & Monitoramento',
+    desc: 'Menções, sentimento e análise de adversários em tempo real.',
+    tag: 'Setup 48h',
+    preco: 'R$ 2.800/mês',
+  },
+  {
+    icone: '📋',
+    titulo: 'Pesquisa de Intenção de Voto',
+    desc: 'Survey digital segmentado por zona, idade e perfil.',
+    tag: 'Setup 1 sem',
+    preco: 'R$ 3.200',
+  },
+  {
     icone: '📊',
     titulo: 'Dashboard BI de Campanha',
     desc: 'Métricas em tempo real + relatório semanal automatizado.',
     tag: 'Setup 1 sem',
     preco: 'R$ 3.500/mês',
+  },
+  {
+    icone: '🧠',
+    titulo: 'Análise de Sentimento com IA',
+    desc: 'Comentários de redes, pautas quentes por região.',
+    tag: 'Setup 72h',
+    preco: 'R$ 2.000/mês',
+  },
+  {
+    icone: '📞',
+    titulo: 'Robô de Ligação / URA Política',
+    desc: 'Twilio/VoIP com mensagem segmentada por eleitorado.',
+    tag: 'Setup 1 sem',
+    preco: 'R$ 3.800/mês',
   },
 ]
 
@@ -61,37 +89,50 @@ export function Servicos() {
         </h2>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {servicos.map((s, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.08 }}
-            className="group bg-bg-card border border-white/[0.06] rounded-xl p-7 flex flex-col justify-between hover:border-accent/20 transition-colors"
-          >
-            <div>
-              <div className="w-11 h-11 rounded-lg bg-primary/15 flex items-center justify-center text-xl mb-5">
-                {s.icone}
-              </div>
-              <h3 className="font-[family-name:var(--font-syne)] font-bold text-lg tracking-tight mb-1.5">
-                {s.titulo}
-              </h3>
-              <p className="text-sm text-text-dim leading-relaxed">{s.desc}</p>
-            </div>
+      {/* First 6 in 3x2 grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+        {servicos.slice(0, 6).map((s, i) => (
+          <ServiceCard key={i} s={s} i={i} />
+        ))}
+      </div>
 
-            <div className="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
-              <span className="font-[family-name:var(--font-mono)] text-[11px] tracking-wider text-accent bg-accent/10 px-3 py-1 rounded">
-                {s.tag}
-              </span>
-              <span className="font-[family-name:var(--font-mono)] text-sm text-text-dim">
-                {s.preco}
-              </span>
-            </div>
-          </motion.div>
+      {/* Remaining 4 in 2x2 grid centered */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {servicos.slice(6).map((s, i) => (
+          <ServiceCard key={i + 6} s={s} i={i + 6} />
         ))}
       </div>
     </section>
+  )
+}
+
+function ServiceCard({ s, i }: { s: typeof servicos[number]; i: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: i * 0.06 }}
+      className="group bg-bg-card border border-white/[0.06] rounded-xl p-7 flex flex-col justify-between hover:border-accent/20 transition-colors"
+    >
+      <div>
+        <div className="w-11 h-11 rounded-lg bg-primary/15 flex items-center justify-center text-xl mb-5">
+          {s.icone}
+        </div>
+        <h3 className="font-[family-name:var(--font-syne)] font-bold text-lg tracking-tight mb-1.5">
+          {s.titulo}
+        </h3>
+        <p className="text-sm text-text-dim leading-relaxed">{s.desc}</p>
+      </div>
+
+      <div className="flex items-center justify-between mt-6 pt-4 border-t border-white/5">
+        <span className="font-[family-name:var(--font-mono)] text-[11px] tracking-wider text-accent bg-accent/10 px-3 py-1 rounded">
+          {s.tag}
+        </span>
+        <span className="font-[family-name:var(--font-mono)] text-sm text-text-dim">
+          {s.preco}
+        </span>
+      </div>
+    </motion.div>
   )
 }

@@ -2,8 +2,11 @@ import { Hero } from '@/components/sections/Hero'
 import { Metrics } from '@/components/sections/Metrics'
 import { Servicos } from '@/components/sections/Servicos'
 import { Processo } from '@/components/sections/Processo'
+import { Cases } from '@/components/sections/Cases'
 import { Planos } from '@/components/sections/Planos'
+import { ChatIA } from '@/components/sections/ChatIA'
 import { CtaFinal } from '@/components/sections/CtaFinal'
+import { Footer } from '@/components/sections/Footer'
 
 export default function Home() {
   return (
@@ -12,8 +15,11 @@ export default function Home() {
       <Metrics />
       <Servicos />
       <Processo />
+      <Cases />
       <Planos />
       <CtaFinal />
+      <Footer />
+      <ChatIA />
     </>
   )
 }
