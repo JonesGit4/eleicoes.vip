@@ -1,16 +1,21 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Nav() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-emerald-50 shadow-sm shadow-emerald-900/5">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
-        <Link
-          href="/"
-          className="text-2xl font-extrabold tracking-tighter text-emerald-600 font-[family-name:var(--font-lexend)]"
-        >
-          Eleições 2026
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo_eleicao_vip.png"
+            alt="Eleicao.vip"
+            width={160}
+            height={48}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         <div className="hidden md:flex items-center space-x-8">
