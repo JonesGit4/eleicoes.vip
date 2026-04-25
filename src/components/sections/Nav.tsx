@@ -18,7 +18,7 @@ export function Nav() {
             href="#servicos"
             className="text-emerald-600 border-b-2 border-emerald-500 pb-1 font-[family-name:var(--font-lexend)] text-sm font-medium tracking-tight"
           >
-            Soluções
+            Serviços
           </a>
           <a
             href="#processo"

@@ -18,9 +18,15 @@ export function Footer() {
           ))}
         </div>
 
-        <p className="font-[family-name:var(--font-lexend)] text-sm text-slate-500">
-          © 2026 Soluções Eleitorais. Tecnologia para a Democracia.
-        </p>
+        <div className="text-right">
+          <p className="font-[family-name:var(--font-lexend)] text-sm text-slate-500">
+            © 2026 Soluções Eleitorais. Tecnologia para a Democracia.
+          </p>
+          <p className="font-[family-name:var(--font-lexend)] text-xs text-slate-400 mt-1">
+            By{' '}
+            <span className="text-emerald-500 font-semibold">Duobro</span>
+          </p>
+        </div>
       </div>
     </footer>
   )
