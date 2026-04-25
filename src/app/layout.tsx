@@ -1,35 +1,29 @@
 import type { Metadata } from 'next'
-import { Syne, DM_Sans, JetBrains_Mono } from 'next/font/google'
+import { Lexend, Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 
-const syne = Syne({
+const lexend = Lexend({
   subsets: ['latin'],
-  variable: '--font-syne',
+  variable: '--font-lexend',
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
+const jakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  variable: '--font-dm',
-  display: 'swap',
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
+  variable: '--font-jakarta',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'ELEIÇÃO.VIP — Marketing Político Digital | Eleições 2026',
+  title: 'Eleições 2026 | Sua campanha no digital',
   description:
     'Infraestrutura técnica de alto nível para candidatos, partidos e agências. Do zero ao ar em 72 horas.',
   openGraph: {
-    title: 'ELEIÇÃO.VIP — Marketing Político Digital',
-    description: 'Sua campanha no digital. Do zero ao ar em 72 horas.',
+    title: 'Eleições 2026 — Sua campanha no digital',
+    description: 'Do zero ao ar em 72 horas. Soluções Full-Stack Eleitorais.',
     type: 'website',
     locale: 'pt_BR',
-    siteName: 'ELEIÇÃO.VIP',
+    siteName: 'Eleições 2026',
   },
 }
 
@@ -41,9 +35,15 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      className={`${lexend.variable} ${jakartaSans.variable}`}
     >
-      <body className="bg-bg text-text font-[family-name:var(--font-dm)] antialiased overflow-x-hidden">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="bg-surface text-on-surface font-[family-name:var(--font-jakarta)] antialiased overflow-x-hidden">
         {children}
       </body>
     </html>

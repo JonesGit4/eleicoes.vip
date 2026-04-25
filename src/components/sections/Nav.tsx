@@ -4,26 +4,47 @@ import Link from 'next/link'
 
 export function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-14 py-5 bg-bg/80 backdrop-blur-md border-b border-white/5">
-      <Link href="/" className="font-[family-name:var(--font-syne)] font-extrabold text-xl tracking-tight">
-        ELEIÇÃO<span className="text-accent">.</span>VIP
-      </Link>
-
-      <div className="hidden md:flex items-center gap-10">
-        <a href="#servicos" className="font-[family-name:var(--font-mono)] text-xs tracking-[0.15em] uppercase text-text-dim hover:text-text transition-colors">
-          Serviços
-        </a>
-        <a href="#processo" className="font-[family-name:var(--font-mono)] text-xs tracking-[0.15em] uppercase text-text-dim hover:text-text transition-colors">
-          Como Funciona
-        </a>
-        <a href="#planos" className="font-[family-name:var(--font-mono)] text-xs tracking-[0.15em] uppercase text-text-dim hover:text-text transition-colors">
-          Planos
-        </a>
-        <a
-          href="#cta"
-          className="bg-accent text-bg font-[family-name:var(--font-syne)] font-bold text-sm px-6 py-2.5 rounded-md hover:brightness-110 transition-all"
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-emerald-50 shadow-sm shadow-emerald-900/5">
+      <div className="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+        <Link
+          href="/"
+          className="text-2xl font-extrabold tracking-tighter text-emerald-600 font-[family-name:var(--font-lexend)]"
         >
-          CONTRATAR
+          Eleições 2026
+        </Link>
+
+        <div className="hidden md:flex items-center space-x-8">
+          <a
+            href="#servicos"
+            className="text-emerald-600 border-b-2 border-emerald-500 pb-1 font-[family-name:var(--font-lexend)] text-sm font-medium tracking-tight"
+          >
+            Soluções
+          </a>
+          <a
+            href="#processo"
+            className="text-slate-600 hover:text-emerald-500 transition-colors font-[family-name:var(--font-lexend)] text-sm font-medium tracking-tight"
+          >
+            Como Funciona
+          </a>
+          <a
+            href="#planos"
+            className="text-slate-600 hover:text-emerald-500 transition-colors font-[family-name:var(--font-lexend)] text-sm font-medium tracking-tight"
+          >
+            Preços
+          </a>
+          <a
+            href="#cases"
+            className="text-slate-600 hover:text-emerald-500 transition-colors font-[family-name:var(--font-lexend)] text-sm font-medium tracking-tight"
+          >
+            Segurança
+          </a>
+        </div>
+
+        <a
+          href="#planos"
+          className="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-[family-name:var(--font-lexend)] font-semibold text-sm active:scale-95 transition-transform duration-200"
+        >
+          Consultar Especialista
         </a>
       </div>
     </nav>

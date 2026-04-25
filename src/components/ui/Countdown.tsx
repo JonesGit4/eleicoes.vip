@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-// Target: October 2026 election day (approximate)
+// Target: October 2026 election day
 const TARGET = new Date('2026-10-04T08:00:00-03:00').getTime()
 
 function getTimeLeft() {
@@ -20,33 +20,36 @@ export function Countdown() {
   const [time, setTime] = useState(getTimeLeft)
 
   useEffect(() => {
-    const interval = setInterval(() => setTime(getTimeLeft()), 60000)
+    const interval = setInterval(() => setTime(getTimeLeft()), 1000)
     return () => clearInterval(interval)
   }, [])
 
   return (
-    <div className="text-right">
-      <div className="font-[family-name:var(--font-mono)] text-[11px] tracking-[0.2em] text-text-muted uppercase mb-4">
-        Campanha começa em
-      </div>
-      <div className="flex gap-3">
-        {[
-          { value: time.dias, label: 'DIAS' },
-          { value: time.horas.toString().padStart(2, '0'), label: 'HORAS' },
-          { value: time.min.toString().padStart(2, '0'), label: 'MIN' },
-        ].map((item) => (
-          <div
-            key={item.label}
-            className="w-[72px] h-[80px] border border-accent/20 rounded-lg flex flex-col items-center justify-center bg-bg-card"
-          >
-            <span className="font-[family-name:var(--font-mono)] text-2xl font-semibold text-accent">
-              {item.value}
-            </span>
-            <span className="font-[family-name:var(--font-mono)] text-[9px] tracking-widest text-text-muted mt-0.5">
-              {item.label}
-            </span>
-          </div>
-        ))}
+    <div className="glass-card rounded-2xl p-6 inline-flex flex-col items-center gap-2">
+      <p className="text-white/60 font-[family-name:var(--font-lexend)] text-xs uppercase tracking-tighter">
+        Oportunidade encerra em:
+      </p>
+      <div className="flex gap-4 text-white font-[family-name:var(--font-lexend)] text-4xl font-bold leading-[44px] tracking-[-0.02em]">
+        <div className="flex flex-col items-center">
+          <span>{String(time.dias).padStart(2, '0')}</span>
+          <span className="text-[10px] uppercase opacity-50 font-normal tracking-normal">
+            Dias
+          </span>
+        </div>
+        <span className="opacity-30">:</span>
+        <div className="flex flex-col items-center">
+          <span>{String(time.horas).padStart(2, '0')}</span>
+          <span className="text-[10px] uppercase opacity-50 font-normal tracking-normal">
+            Horas
+          </span>
+        </div>
+        <span className="opacity-30">:</span>
+        <div className="flex flex-col items-center">
+          <span>{String(time.min).padStart(2, '0')}</span>
+          <span className="text-[10px] uppercase opacity-50 font-normal tracking-normal">
+            Min
+          </span>
+        </div>
       </div>
     </div>
   )

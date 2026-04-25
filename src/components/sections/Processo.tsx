@@ -4,71 +4,66 @@ import { motion } from 'framer-motion'
 
 const steps = [
   {
-    num: '01',
-    icone: '⚡',
-    titulo: 'Contrate online',
-    desc: 'Checkout direto ou WhatsApp em menos de 5 minutos. Sem burocracia.',
-    tempo: '< 5 min',
+    num: 1,
+    titulo: 'Contrata online',
+    desc: 'Escolha o seu plano e faça o checkout seguro em 2 minutos.',
+    bgColor: 'bg-primary',
+    textColor: 'text-white',
+    shadowColor: 'shadow-emerald-200',
   },
   {
-    num: '02',
-    icone: '🎯',
-    titulo: 'Brief rápido',
-    desc: 'Call de 30 minutos ou formulário inteligente com tudo que precisamos.',
-    tempo: '30 min',
+    num: 2,
+    titulo: 'Brief em 30 min',
+    desc: 'Nossa equipe técnica faz o onboarding imediato dos dados.',
+    bgColor: 'bg-primary',
+    textColor: 'text-white',
+    shadowColor: 'shadow-emerald-200',
   },
   {
-    num: '03',
-    icone: '🚀',
+    num: 3,
     titulo: 'Campanha no ar',
-    desc: 'Entrega técnica dentro do prazo prometido. Monitoramento contínuo.',
-    tempo: '24–72h',
+    desc: 'Sua infraestrutura funcionando com segurança e performance.',
+    bgColor: 'bg-sunlight-yellow',
+    textColor: 'text-on-surface',
+    shadowColor: 'shadow-yellow-200',
   },
 ]
 
 export function Processo() {
   return (
-    <section id="processo" className="px-6 md:px-14 py-20 md:py-28 border-t border-white/5">
-      <div className="mb-12">
-        <div className="font-[family-name:var(--font-mono)] text-xs tracking-[0.2em] text-accent uppercase mb-4">
-          // Processo
-        </div>
-        <h2 className="font-[family-name:var(--font-syne)] font-extrabold text-3xl md:text-[2.8rem] tracking-tight leading-[1.05]">
-          Do contato ao ar
-          <br />
-          em 3 passos.
+    <section id="processo" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="font-[family-name:var(--font-lexend)] font-bold text-4xl leading-[44px] tracking-[-0.02em] text-center mb-20">
+          Velocidade é a nossa religião
         </h2>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        {steps.map((s, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.15 }}
-            className={`relative p-8 md:p-10 border border-white/[0.06] ${
-              i === 0 ? 'rounded-t-2xl md:rounded-t-none md:rounded-l-2xl' : ''
-            } ${
-              i === 2 ? 'rounded-b-2xl md:rounded-b-none md:rounded-r-2xl' : ''
-            } ${i > 0 ? 'border-t-0 md:border-t md:border-l-0' : ''}`}
-          >
-            {/* Ghost number */}
-            <span className="absolute top-4 right-6 font-[family-name:var(--font-syne)] text-6xl font-extrabold text-white/[0.03] select-none">
-              {s.num}
-            </span>
+        <div className="relative flex flex-col md:flex-row justify-between items-start gap-12">
+          {/* Connecting line */}
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-emerald-100 hidden md:block -translate-y-1/2 z-0" />
 
-            <div className="text-2xl mb-5">{s.icone}</div>
-            <h3 className="font-[family-name:var(--font-syne)] font-bold text-lg mb-2">
-              {s.titulo}
-            </h3>
-            <p className="text-sm text-text-dim leading-relaxed mb-4">{s.desc}</p>
-            <span className="font-[family-name:var(--font-mono)] text-xs text-accent">
-              {s.tempo}
-            </span>
-          </motion.div>
-        ))}
+          {steps.map((s, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.15 }}
+              className="relative z-10 flex flex-col items-center text-center md:w-1/3"
+            >
+              <div
+                className={`w-16 h-16 ${s.bgColor} rounded-full flex items-center justify-center ${s.textColor} font-[family-name:var(--font-lexend)] font-bold text-4xl leading-[44px] tracking-[-0.02em] mb-6 shadow-xl ${s.shadowColor}`}
+              >
+                {s.num}
+              </div>
+              <h4 className="font-[family-name:var(--font-lexend)] font-semibold text-2xl leading-8 mb-2">
+                {s.titulo}
+              </h4>
+              <p className="font-[family-name:var(--font-jakarta)] text-sm text-text-muted">
+                {s.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -1,5 +1,4 @@
 import { Nav } from '@/components/sections/Nav'
-import { Footer } from '@/components/sections/Footer'
 
 export default function MarketingLayout({
   children,
@@ -10,7 +9,6 @@ export default function MarketingLayout({
     <>
       <Nav />
       <main>{children}</main>
-      <Footer />
     </>
   )
 }
