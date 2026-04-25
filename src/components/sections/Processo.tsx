@@ -25,7 +25,7 @@ export function Processo() {
     <section id="processo" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="font-[family-name:var(--font-lexend)] font-bold text-4xl leading-[44px] tracking-[-0.02em] text-center mb-20">
-          Velocidade é a nossa religião
+          Velocidade é a nossa Missão
         </h2>
 
         <div className="relative flex flex-col md:flex-row justify-between items-start gap-12">
