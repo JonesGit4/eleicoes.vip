@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { Lexend, Plus_Jakarta_Sans } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 
 const lexend = Lexend({
@@ -44,11 +43,9 @@ export default function RootLayout({
       className={`${lexend.variable} ${jakartaSans.variable}`}
     >
       <head>
-        {/* Material Symbols — non-blocking load */}
-        <Script
-          id="material-symbols"
-          strategy="afterInteractive"
-          src="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
         />
       </head>
       <body className="bg-surface text-on-surface font-[family-name:var(--font-jakarta)] antialiased overflow-x-hidden">
