@@ -48,6 +48,95 @@ function AnimatedNumber({
   )
 }
 
+function MetricCard({
+  value,
+  prefix,
+  suffix,
+  label,
+  index,
+}: {
+  value: number
+  prefix: string
+  suffix: string
+  label: string
+  index: number
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const inView = useInView(ref, { once: true, margin: '100px' })
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="relative group"
+    >
+      {/* Animated rotating border glow — paused when off-screen */}
+      <div className="absolute -inset-[1px] rounded-2xl overflow-hidden">
+        <motion.div
+          className="absolute inset-0"
+          style={{
+            background:
+              'conic-gradient(from 0deg, transparent 0%, #10b981 25%, #34d399 50%, #10b981 75%, transparent 100%)',
+          }}
+          animate={inView ? { rotate: 360 } : { rotate: 0 }}
+          transition={{
+            duration: 3 + index * 0.5,
+            repeat: inView ? Infinity : 0,
+            ease: 'linear',
+          }}
+        />
+      </div>
+
+      {/* Outer glow pulse — paused when off-screen */}
+      <motion.div
+        className="absolute -inset-1 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        style={{
+          background:
+            'radial-gradient(ellipse at center, rgba(16,185,129,0.15) 0%, transparent 70%)',
+          filter: 'blur(8px)',
+        }}
+        animate={
+          inView
+            ? { scale: [1, 1.05, 1] }
+            : { scale: 1 }
+        }
+        transition={
+          inView
+            ? { duration: 2, repeat: Infinity, ease: 'easeInOut' }
+            : { duration: 0 }
+        }
+      />
+
+      {/* Card body */}
+      <div className="relative rounded-2xl p-8 text-center bg-slate-950/90 backdrop-blur-xl border border-white/[0.06] overflow-hidden">
+        {/* Inner glass highlight */}
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(16,185,129,0.05) 100%)',
+          }}
+        />
+
+        <div className="relative z-10">
+          <h3 className="font-[family-name:var(--font-lexend)] text-4xl font-bold leading-[44px] tracking-[-0.02em] text-emerald-400 mb-2">
+            <AnimatedNumber
+              value={value}
+              prefix={prefix}
+              suffix={suffix}
+            />
+          </h3>
+          <p className="font-[family-name:var(--font-jakarta)] text-sm text-slate-400 uppercase tracking-wide">
+            {label}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
 export function Metrics() {
   return (
     <section className="py-20 bg-slate-950 relative overflow-hidden">
@@ -63,74 +152,14 @@ export function Metrics() {
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
         {metrics.map((m, i) => (
-          <motion.div
+          <MetricCard
             key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="relative group"
-          >
-            {/* Animated rotating border glow */}
-            <div className="absolute -inset-[1px] rounded-2xl overflow-hidden">
-              <motion.div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    'conic-gradient(from 0deg, transparent 0%, #10b981 25%, #34d399 50%, #10b981 75%, transparent 100%)',
-                }}
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 3 + i * 0.5,
-                  repeat: Infinity,
-                  ease: 'linear',
-                }}
-              />
-            </div>
-
-            {/* Outer glow pulse */}
-            <motion.div
-              className="absolute -inset-1 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{
-                background:
-                  'radial-gradient(ellipse at center, rgba(16,185,129,0.15) 0%, transparent 70%)',
-                filter: 'blur(8px)',
-              }}
-              animate={{
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            />
-
-            {/* Card body */}
-            <div className="relative rounded-2xl p-8 text-center bg-slate-950/90 backdrop-blur-xl border border-white/[0.06] overflow-hidden">
-              {/* Inner glass highlight */}
-              <div
-                className="absolute inset-0 opacity-[0.04]"
-                style={{
-                  background:
-                    'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(16,185,129,0.05) 100%)',
-                }}
-              />
-
-              <div className="relative z-10">
-                <h3 className="font-[family-name:var(--font-lexend)] text-4xl font-bold leading-[44px] tracking-[-0.02em] text-emerald-400 mb-2">
-                  <AnimatedNumber
-                    value={m.value}
-                    prefix={m.prefix}
-                    suffix={m.suffix}
-                  />
-                </h3>
-                <p className="font-[family-name:var(--font-jakarta)] text-sm text-slate-400 uppercase tracking-wide">
-                  {m.label}
-                </p>
-              </div>
-            </div>
-          </motion.div>
+            value={m.value}
+            prefix={m.prefix}
+            suffix={m.suffix}
+            label={m.label}
+            index={i}
+          />
         ))}
       </div>
     </section>
