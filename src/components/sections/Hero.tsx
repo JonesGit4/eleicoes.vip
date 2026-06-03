@@ -82,39 +82,19 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Right — Visual placeholder */}
+        {/* Right — Hero visual */}
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="hidden lg:flex items-center justify-center"
         >
-          <div className="relative w-full max-w-md aspect-[4/3] rounded-2xl bg-white/[0.03] border border-white/[0.08] overflow-hidden backdrop-blur-sm">
-            {/* Abstract dashboard visual */}
-            <div className="absolute inset-0 flex flex-col gap-3 p-6">
-              <div className="flex gap-2 mb-2">
-                <div className="h-2 w-2 rounded-full bg-emerald-500" />
-                <div className="h-2 w-2 rounded-full bg-slate-600" />
-                <div className="h-2 w-2 rounded-full bg-slate-600" />
-              </div>
-              <div className="h-3 w-3/4 rounded bg-white/10" />
-              <div className="h-3 w-1/2 rounded bg-white/5" />
-              <div className="flex-1 grid grid-cols-3 gap-3 mt-2">
-                <div className="rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-3 flex flex-col justify-end">
-                  <div className="h-2 w-2/3 rounded bg-emerald-500/40 mb-1" />
-                  <div className="h-4 w-1/2 rounded bg-emerald-400/60" />
-                </div>
-                <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-3 flex flex-col justify-end">
-                  <div className="h-2 w-2/3 rounded bg-white/10 mb-1" />
-                  <div className="h-4 w-1/2 rounded bg-white/20" />
-                </div>
-                <div className="rounded-xl bg-white/[0.03] border border-white/[0.06] p-3 flex flex-col justify-end">
-                  <div className="h-2 w-2/3 rounded bg-white/10 mb-1" />
-                  <div className="h-4 w-1/2 rounded bg-white/20" />
-                </div>
-              </div>
-              <div className="flex-1 rounded-xl bg-white/[0.02] border border-white/[0.05] mt-1" />
-            </div>
+          <div className="relative w-full max-w-xl rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl shadow-emerald-900/20">
+            <img
+              src="/hero-bg.png"
+              alt="Election intelligence dashboard"
+              className="w-full h-auto"
+            />
           </div>
         </motion.div>
       </div>
