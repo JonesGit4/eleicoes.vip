@@ -21,31 +21,63 @@ const servicos = [
   },
   {
     icon: 'contact_page',
-    titulo: 'CRM Eleitoral + Chatbot',
-    desc: 'Cadastro, segmentação por zona, follow-up automático e bot de propostas 24/7.',
+    titulo: 'CRM Eleitoral Automatizado',
+    desc: 'Cadastro, segmentação por zona, follow-up automático.',
     tag: 'Setup 1 sem',
     preco: 'R$ 4.000',
     highlight: false,
   },
   {
-    icon: 'monitoring',
-    titulo: 'Social Listening & BI',
-    desc: 'Menções, sentimento, análise de adversários e dashboard em tempo real.',
-    tag: 'Setup 48h',
-    preco: 'R$ 3.500',
+    icon: 'smart_toy',
+    titulo: 'Chatbot Eleitoral',
+    desc: 'Bot de propostas, voluntários e atendimento 24/7.',
+    tag: 'Go-live 48h',
+    preco: 'R$ 1.800',
     highlight: false,
   },
   {
     icon: 'web',
-    titulo: 'Landing Page + Pesquisa',
-    desc: 'Captação de apoiadores, doadores e survey de intenção de voto digital.',
+    titulo: 'Landing Page do Candidato',
+    desc: 'Captação de apoiadores, doadores e cabos eleitorais.',
     tag: 'Go-live 72h',
     preco: 'R$ 2.200',
     highlight: false,
   },
   {
+    icon: 'monitoring',
+    titulo: 'Social Listening & Monitoramento',
+    desc: 'Menções, sentimento e análise de adversários em tempo real.',
+    tag: 'Setup 48h',
+    preco: 'R$ 2.800',
+    highlight: false,
+  },
+  {
+    icon: 'ballot',
+    titulo: 'Pesquisa de Intenção de Voto',
+    desc: 'Survey digital segmentado por zona, idade e perfil.',
+    tag: 'Setup 1 sem',
+    preco: 'R$ 3.200',
+    highlight: false,
+  },
+  {
+    icon: 'query_stats',
+    titulo: 'Dashboard BI de Campanha',
+    desc: 'Métricas em tempo real + relatório semanal automatizado.',
+    tag: 'Setup 1 sem',
+    preco: 'R$ 3.500',
+    highlight: false,
+  },
+  {
+    icon: 'psychology',
+    titulo: 'Análise de Sentimento com IA',
+    desc: 'Comentários de redes, pautas quentes por região.',
+    tag: 'Setup 72h',
+    preco: 'R$ 2.000',
+    highlight: false,
+  },
+  {
     icon: 'call',
-    titulo: 'Robô de Ligação / URA',
+    titulo: 'Robô de Ligação / URA Política',
     desc: 'Twilio/VoIP com mensagem segmentada por eleitorado e tracking de resposta.',
     tag: 'Setup 1 sem',
     preco: 'R$ 3.800',
@@ -67,15 +99,15 @@ export function Servicos() {
           </p>
         </div>
 
-        {/* Cards — 3 columns on desktop, zig-zag feel via staggered animation */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Cards Grid — 5 columns on desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {servicos.map((s, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '80px' }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
               className={`group relative rounded-3xl p-6 border transition-all duration-300 ${
                 s.highlight
                   ? 'bg-emerald-500 text-white border-emerald-400 shadow-xl shadow-emerald-200/30'
@@ -103,7 +135,7 @@ export function Servicos() {
 
                 {/* Title */}
                 <h3
-                  className={`font-[family-name:var(--font-lexend)] font-semibold text-lg leading-7 mb-2 ${
+                  className={`font-[family-name:var(--font-lexend)] font-semibold text-base leading-6 mb-2 ${
                     s.highlight ? 'text-white' : 'text-text-deep'
                   }`}
                 >
@@ -112,7 +144,7 @@ export function Servicos() {
 
                 {/* Description */}
                 <p
-                  className={`font-[family-name:var(--font-jakarta)] text-sm leading-relaxed mb-5 flex-grow ${
+                  className={`font-[family-name:var(--font-jakarta)] text-xs leading-relaxed mb-5 flex-grow ${
                     s.highlight ? 'text-white/80' : 'text-text-muted'
                   }`}
                 >
