@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eleicao.vip — Sua campanha no digital</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#006c49',
+          'primary-container': '#10b981',
+          'text-deep': '#0f172a',
+          'text-muted': '#64748b',
+          surface: '#f4fbf4',
+          'surface-cream': '#fdfcfb',
+          'surface-low': '#eef6ee',
+          'hero-dark': '#0f172a',
+          sunlight: '#fbbf24',
+          coral: '#f43f5e',
+        },
+        fontFamily: {
+          lexend: ['Lexend', 'sans-serif'],
+          jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  [data-nav] { transition: background .3s ease, border-color .3s ease, box-shadow .3s ease; }
+  [data-nav].scrolled { box-shadow: 0 1px 0 rgba(16,185,129,.12), 0 8px 30px -18px rgba(0,0,0,.6); }
+</style>
+</head>
+<body class="font-jakarta text-text-deep">
+
+  <!-- ===================== NAV ===================== -->
+  <nav data-nav class="fixed top-0 inset-x-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-[72px] flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="assets/logo_eleicao_vip.png" alt="Eleicao.vip" class="h-9 w-auto" />
+      </a>
+      <div class="hidden md:flex items-center gap-9 text-sm font-medium text-slate-300">
+        <a href="#servicos" class="nav-link hover:text-white transition-colors">Serviços</a>
+        <a href="#metrics" class="nav-link hover:text-white transition-colors">Resultados</a>
+        <a href="servico-trafego-politico.html" class="nav-link hover:text-white transition-colors">Planos</a>
+        <a href="#" class="nav-link hover:text-white transition-colors">Compliance</a>
+      </div>
+      <a href="servico-trafego-politico.html#contato" class="bg-primary-container hover:bg-emerald-400 text-white px-5 py-2.5 rounded-full font-lexend font-semibold text-sm shadow-lg shadow-emerald-900/30 active:scale-95 transition-all">
+        Consultar especialista
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="relative isolate hero-gradient overflow-hidden pt-36 pb-28 lg:pt-44 lg:pb-36">
+    <!-- layered bg -->
+    <div class="absolute inset-0 particle-bg opacity-[0.35]"></div>
+    <div class="absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(70%_60%_at_70%_20%,#000,transparent)]"></div>
+    <div class="absolute -top-24 right-[-10%] h-[520px] w-[520px] rounded-full bg-emerald-500/20 blur-[120px]"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-14 lg:gap-16 items-center">
+
+      <!-- LEFT -->
+      <div>
+        <div data-reveal class="inline-flex items-center gap-2.5 glass-emerald pl-2.5 pr-4 py-2 rounded-full mb-7">
+          <span class="pulse-dot flex h-2 w-2 rounded-full bg-emerald-400"></span>
+          <span class="font-lexend text-[11px] uppercase tracking-[0.18em] text-emerald-300">
+            Eleições 2026 · Vagas limitadas por região
+          </span>
+        </div>
+
+        <h1 data-reveal style="--reveal-delay:60ms" class="font-lexend font-bold text-white tracking-[-0.025em] text-[40px] leading-[1.06] sm:text-[52px] lg:text-[56px] mb-6">
+          Sua campanha no digital.<br />
+          <span class="text-emerald-400">Do zero ao ar</span> em 72 horas.
+        </h1>
+
+        <p data-reveal style="--reveal-delay:120ms" class="text-[17px] lg:text-lg leading-[1.65] text-slate-300/90 max-w-[34rem] mb-9">
+          Infraestrutura técnica de alto nível para candidatos, partidos e agências
+          que não podem perder tempo. Tráfego, dados e monitoramento em uma só central.
+        </p>
+
+        <div data-reveal style="--reveal-delay:180ms" class="flex flex-wrap items-center gap-x-5 gap-y-4 mb-12">
+          <a href="servico-trafego-politico.html#contato" class="group inline-flex items-center gap-2 bg-primary-container hover:bg-emerald-400 text-white pl-7 pr-6 py-4 rounded-full font-lexend font-bold text-base shadow-xl shadow-emerald-900/40 transition-all">
+            Contratar agora
+            <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+          </a>
+          <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-slate-300 hover:text-white font-lexend font-medium text-sm transition-colors">
+            <span class="material-symbols-outlined text-[20px] text-emerald-400">chat</span>
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <!-- slim trust strip: proof + countdown, replaces the heavy card -->
+        <div data-reveal style="--reveal-delay:240ms" class="flex flex-wrap items-center gap-6">
+          <div class="flex items-center gap-3">
+            <div class="flex -space-x-2.5">
+              <span class="h-9 w-9 rounded-full ring-2 ring-slate-900 bg-emerald-500/90 grid place-items-center font-lexend text-xs font-bold text-white">SC</span>
+              <span class="h-9 w-9 rounded-full ring-2 ring-slate-900 bg-emerald-700 grid place-items-center font-lexend text-xs font-bold text-white">MG</span>
+              <span class="h-9 w-9 rounded-full ring-2 ring-slate-900 bg-emerald-600 grid place-items-center font-lexend text-xs font-bold text-white">SP</span>
+              <span class="h-9 w-9 rounded-full ring-2 ring-slate-900 bg-white/10 grid place-items-center font-lexend text-[10px] font-bold text-emerald-300">+77</span>
+            </div>
+            <p class="text-xs leading-snug text-slate-400">
+              <span class="text-white font-semibold">+80 campanhas</span><br />ativas no Brasil
+            </p>
+          </div>
+
+          <div class="hidden sm:block h-10 w-px bg-white/10"></div>
+
+          <div data-countdown class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-emerald-400 text-[22px]">timer</span>
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.16em] text-slate-500 mb-0.5 font-lexend">Eleição em</p>
+              <div class="flex items-baseline gap-1 font-lexend font-bold text-white tabular-nums">
+                <span data-d class="text-xl">--</span><span class="text-emerald-500 text-sm">d</span>
+                <span data-h class="text-xl ml-1">--</span><span class="text-emerald-500 text-sm">h</span>
+                <span data-m class="text-xl ml-1">--</span><span class="text-emerald-500 text-sm">m</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — command-center frame -->
+      <div data-reveal style="--reveal-delay:200ms" class="relative">
+        <div class="absolute -inset-6 bg-emerald-500/15 blur-3xl rounded-full"></div>
+
+        <div class="relative rounded-2xl overflow-hidden border border-white/[0.10] bg-slate-950/60 shadow-2xl shadow-emerald-950/50">
+          <!-- chrome -->
+          <div class="flex items-center gap-2 px-4 h-10 border-b border-white/[0.06] bg-white/[0.02]">
+            <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+            <span class="ml-3 font-lexend text-[11px] tracking-wide text-slate-400">central.eleicao.vip</span>
+            <span class="ml-auto inline-flex items-center gap-1.5 text-[10px] font-lexend uppercase tracking-wider text-emerald-400">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span> ao vivo
+            </span>
+          </div>
+          <!-- image -->
+          <div class="relative">
+            <img src="assets/hero-bg.png" alt="Central de inteligência eleitoral em tempo real" class="w-full h-auto block" />
+            <div class="scan-line"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- floating chips -->
+        <div class="float-chip absolute -left-3 top-20 hidden lg:flex glass rounded-xl px-3.5 py-2.5 items-center gap-2.5 shadow-xl">
+          <span class="material-symbols-outlined text-emerald-400 text-[20px]">trending_up</span>
+          <div>
+            <p class="text-[10px] uppercase tracking-wide text-slate-400 font-lexend">Intenção</p>
+            <p class="font-lexend font-bold text-white text-sm leading-none">+12,4%</p>
+          </div>
+        </div>
+        <div class="float-chip delay absolute -right-3 bottom-12 hidden lg:flex glass rounded-xl px-3.5 py-2.5 items-center gap-2.5 shadow-xl">
+          <span class="material-symbols-outlined text-emerald-400 text-[20px]">bolt</span>
+          <div>
+            <p class="text-[10px] uppercase tracking-wide text-slate-400 font-lexend">Go-live</p>
+            <p class="font-lexend font-bold text-white text-sm leading-none">48 horas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== METRICS STRIP ===================== -->
+  <section id="metrics" class="bg-slate-950 border-y border-white/[0.06] py-9">
+    <div class="max-w-4xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-y-7 gap-x-4">
+      <div data-reveal class="text-center md:px-3">
+        <p class="metric-num relative inline-block font-lexend font-bold text-4xl tracking-[-0.02em]" data-count="80" data-prefix="+">+80</p>
+        <p class="text-[11px] uppercase tracking-[0.14em] text-slate-500 mt-2 font-lexend">Projetos ativos</p>
+      </div>
+      <div data-reveal style="--reveal-delay:80ms" class="text-center md:px-3 md:border-l md:border-white/[0.06]">
+        <p class="metric-num relative inline-block font-lexend font-bold text-4xl tracking-[-0.02em]" data-count="72" data-suffix="h">72h</p>
+        <p class="text-[11px] uppercase tracking-[0.14em] text-slate-500 mt-2 font-lexend">Go-live recorde</p>
+      </div>
+      <div data-reveal style="--reveal-delay:160ms" class="text-center md:px-3 md:border-l md:border-white/[0.06]">
+        <p class="metric-num relative inline-block font-lexend font-bold text-4xl tracking-[-0.02em]" data-count="0" data-prefix="R$ ">R$ 0</p>
+        <p class="text-[11px] uppercase tracking-[0.14em] text-slate-500 mt-2 font-lexend">Taxa de setup</p>
+      </div>
+      <div data-reveal style="--reveal-delay:240ms" class="text-center md:px-3 md:border-l md:border-white/[0.06]">
+        <p class="metric-num relative inline-block font-lexend font-bold text-4xl tracking-[-0.02em]" data-count="99.9" data-decimals="1" data-suffix="%">99,9%</p>
+        <p class="text-[11px] uppercase tracking-[0.14em] text-slate-500 mt-2 font-lexend">Uptime garantido</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVIÇOS ===================== -->
+  <section id="servicos" class="bg-surface-cream py-24 lg:py-28">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div data-reveal class="max-w-2xl mb-14">
+        <span class="inline-flex items-center gap-2 text-emerald-700 font-lexend text-xs font-semibold uppercase tracking-[0.16em] mb-4">
+          <span class="h-px w-7 bg-emerald-500"></span> Arsenal digital
+        </span>
+        <h2 class="font-lexend font-bold text-4xl lg:text-[44px] leading-[1.08] tracking-[-0.025em] text-text-deep mb-4">
+          Serviços full-stack eleitorais
+        </h2>
+        <p class="text-base lg:text-lg text-text-muted leading-relaxed">
+          Tecnologia avançada para dominar o território digital — do tráfego pago ao
+          war room de monitoramento. Clique em qualquer serviço para ver o detalhe.
+        </p>
+      </div>
+
+      <div id="servicos-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST BAND ===================== -->
+  <section class="relative bg-slate-950 py-20 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-[0.35]"></div>
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div data-reveal class="text-center max-w-xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-2 glass-emerald px-4 py-2 rounded-full mb-5">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          <span class="font-lexend text-[11px] uppercase tracking-[0.16em] text-emerald-300">Segurança e compliance</span>
+        </span>
+        <h2 class="font-lexend font-bold text-3xl lg:text-[34px] tracking-[-0.02em] text-white mb-3">Sua campanha protegida</h2>
+        <p class="text-slate-400 leading-relaxed">Infraestrutura blindada com as certificações que candidaturas sérias exigem.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div data-reveal class="glass rounded-2xl p-6 text-center">
+          <div class="h-12 w-12 mx-auto mb-4 rounded-xl bg-emerald-500/10 grid place-items-center"><span class="material-symbols-outlined text-emerald-400 text-2xl">gavel</span></div>
+          <h4 class="font-lexend font-semibold text-sm text-white mb-1.5">Conformidade TSE</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Resolução nº 23.732/2024.</p>
+        </div>
+        <div data-reveal style="--reveal-delay:80ms" class="glass rounded-2xl p-6 text-center">
+          <div class="h-12 w-12 mx-auto mb-4 rounded-xl bg-emerald-500/10 grid place-items-center"><span class="material-symbols-outlined text-emerald-400 text-2xl">shield</span></div>
+          <h4 class="font-lexend font-semibold text-sm text-white mb-1.5">LGPD & Privacidade</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Dados criptografados. Zero vazamentos.</p>
+        </div>
+        <div data-reveal style="--reveal-delay:160ms" class="glass rounded-2xl p-6 text-center">
+          <div class="h-12 w-12 mx-auto mb-4 rounded-xl bg-emerald-500/10 grid place-items-center"><span class="material-symbols-outlined text-emerald-400 text-2xl">lock</span></div>
+          <h4 class="font-lexend font-semibold text-sm text-white mb-1.5">Infra segura</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">HTTPS, WAF, DDoS protection.</p>
+        </div>
+        <div data-reveal style="--reveal-delay:240ms" class="glass rounded-2xl p-6 text-center">
+          <div class="h-12 w-12 mx-auto mb-4 rounded-xl bg-emerald-500/10 grid place-items-center"><span class="material-symbols-outlined text-emerald-400 text-2xl">verified</span></div>
+          <h4 class="font-lexend font-semibold text-sm text-white mb-1.5">Compliance jurídico</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Auditoria externa de campanhas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-slate-950 border-t border-white/[0.06] py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <p class="font-lexend font-bold text-2xl tracking-[-0.02em] text-white mb-3">Tecnologia para a Democracia.</p>
+      <p class="text-sm text-slate-500">By <span class="text-emerald-400 font-semibold">Duobro</span> · 2026</p>
+    </div>
+  </footer>
+
+  <!-- chat FAB -->
+  <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="fixed bottom-7 right-7 z-[100] h-15 w-15 h-[60px] w-[60px] rounded-full bg-primary-container grid place-items-center text-white shadow-2xl shadow-emerald-900/50 hover:scale-105 active:scale-95 transition-transform">
+    <span class="material-symbols-outlined text-3xl">smart_toy</span>
+    <span class="absolute -top-1 -right-1 bg-coral text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full font-lexend">IA</span>
+  </a>
+
+  <script>
+    /* Service catalog — rendered as linked cards */
+    var SERVICOS = [
+      { icon:'ads_click', titulo:'Gestão de Tráfego Político', desc:'Meta ADS + Google ADS eleitoral com regras TSE. Segmentação por zona, idade e perfil.', tag:'Go-live 48h', preco:'R$ 2.500', highlight:true, href:'servico-trafego-politico.html' },
+      { icon:'web', titulo:'Landing Page do Candidato', desc:'Captação de apoiadores, doadores e cabos eleitorais.', tag:'Go-live 72h', preco:'R$ 2.200' },
+      { icon:'ballot', titulo:'Pesquisa de Intenção de Voto', desc:'Survey digital segmentado por zona, idade e perfil.', tag:'Setup 1 sem', preco:'R$ 3.200' },
+      { icon:'monitoring', titulo:'Social Listening & Monitoramento', desc:'Menções, sentimento e análise de adversários em tempo real.', tag:'Setup 48h', preco:'R$ 2.800' },
+      { icon:'send', titulo:'Disparo WhatsApp & Telegram', desc:'Infraestrutura de disparo segmentado por CEP/bairro com tracking de entrega.', tag:'Go-live 72h', preco:'R$ 3.000' },
+      { icon:'contact_page', titulo:'CRM Eleitoral Automatizado', desc:'Cadastro, segmentação por zona e follow-up automático.', tag:'Setup 1 sem', preco:'R$ 4.000' },
+      { icon:'smart_toy', titulo:'Chatbot Eleitoral', desc:'Bot de propostas, voluntários e atendimento 24/7.', tag:'Go-live 48h', preco:'R$ 1.800' },
+      { icon:'query_stats', titulo:'Dashboard BI de Campanha', desc:'Métricas em tempo real + relatório semanal automatizado.', tag:'Setup 1 sem', preco:'R$ 3.500' },
+      { icon:'psychology', titulo:'Análise de Sentimento com IA', desc:'Comentários de redes e pautas quentes por região.', tag:'Setup 72h', preco:'R$ 2.000' },
+      { icon:'call', titulo:'Robô de Ligação / URA Política', desc:'Twilio/VoIP com mensagem segmentada e tracking de resposta.', tag:'Setup 1 sem', preco:'R$ 3.800' },
+    ];
+
+    var grid = document.getElementById('servicos-grid');
+    SERVICOS.forEach(function (s, i) {
+      var href = s.href || 'servico-trafego-politico.html';
+      var hl = s.highlight;
+      var a = document.createElement('a');
+      a.href = href;
+      a.setAttribute('data-reveal', '');
+      a.style.setProperty('--reveal-delay', (i % 5) * 60 + 'ms');
+      a.className = 'group relative flex flex-col rounded-3xl p-6 border transition-all duration-300 ' +
+        (hl
+          ? 'bg-primary-container text-white border-emerald-400 shadow-xl shadow-emerald-200/40'
+          : 'bg-white border-emerald-100/70 hover:border-emerald-300 shadow-sm hover:shadow-xl hover:-translate-y-1');
+      a.innerHTML =
+        '<div class="flex items-center justify-between mb-5">' +
+          '<div class="h-12 w-12 rounded-2xl grid place-items-center transition-colors ' +
+            (hl ? 'bg-white/20 text-white' : 'bg-emerald-50 text-emerald-600 group-hover:bg-primary-container group-hover:text-white') + '">' +
+            '<span class="material-symbols-outlined text-2xl">' + s.icon + '</span>' +
+          '</div>' +
+          (hl ? '<span class="text-[10px] font-lexend font-bold uppercase tracking-wider bg-white/20 text-white px-2.5 py-1 rounded-full">Mais contratado</span>' : '') +
+        '</div>' +
+        '<h3 class="font-lexend font-semibold text-[15px] leading-snug mb-2 ' + (hl ? 'text-white' : 'text-text-deep') + '">' + s.titulo + '</h3>' +
+        '<p class="text-[13px] leading-relaxed mb-5 flex-grow ' + (hl ? 'text-white/80' : 'text-text-muted') + '">' + s.desc + '</p>' +
+        '<span class="inline-block w-fit text-[10px] font-lexend font-medium px-2.5 py-1 rounded-full mb-4 ' +
+          (hl ? 'bg-white/20 text-white' : 'bg-sunlight/20 text-amber-700') + '">' + s.tag + '</span>' +
+        '<div class="flex items-end justify-between mt-auto pt-1">' +
+          '<div>' +
+            '<p class="text-[9px] uppercase tracking-wide ' + (hl ? 'text-white/60' : 'text-text-muted') + '">A partir de</p>' +
+            '<p class="font-lexend font-bold text-xl tracking-[-0.02em] leading-none ' + (hl ? 'text-white' : 'text-emerald-600') + '">' + s.preco + '</p>' +
+          '</div>' +
+          '<span class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl font-lexend text-[11px] font-bold transition-colors ' +
+            (hl ? 'bg-white text-emerald-600 group-hover:bg-emerald-50' : 'bg-primary text-white group-hover:bg-emerald-700') + '">' +
+            'Ver <span class="material-symbols-outlined text-[15px]">arrow_forward</span>' +
+          '</span>' +
+        '</div>';
+      grid.appendChild(a);
+    });
+  </script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

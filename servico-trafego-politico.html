@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gestão de Tráfego Político — Eleicao.vip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#006c49',
+          'primary-container': '#10b981',
+          'text-deep': '#0f172a',
+          'text-muted': '#64748b',
+          surface: '#f4fbf4',
+          'surface-cream': '#fdfcfb',
+          'surface-low': '#eef6ee',
+          'hero-dark': '#0f172a',
+          sunlight: '#fbbf24',
+          coral: '#f43f5e',
+        },
+        fontFamily: {
+          lexend: ['Lexend', 'sans-serif'],
+          jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<style>
+  [data-nav] { transition: background .3s ease, border-color .3s ease, box-shadow .3s ease; }
+  [data-nav].scrolled { box-shadow: 0 1px 0 rgba(16,185,129,.12), 0 8px 30px -18px rgba(0,0,0,.6); }
+  .chart-bar { transition: height .8s cubic-bezier(.22,.61,.36,1); }
+</style>
+</head>
+<body class="font-jakarta text-text-deep">
+
+  <!-- ===================== NAV ===================== -->
+  <nav data-nav class="fixed top-0 inset-x-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-[72px] flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 shrink-0">
+        <img src="assets/logo_eleicao_vip.png" alt="Eleicao.vip" class="h-9 w-auto" />
+      </a>
+      <div class="hidden md:flex items-center gap-9 text-sm font-medium text-slate-300">
+        <a href="index.html#servicos" class="nav-link hover:text-white transition-colors">Serviços</a>
+        <a href="index.html#metrics" class="nav-link hover:text-white transition-colors">Resultados</a>
+        <a href="#planos" class="nav-link hover:text-white transition-colors">Planos</a>
+        <a href="#compliance" class="nav-link hover:text-white transition-colors">Compliance</a>
+      </div>
+      <a href="#contato" class="bg-primary-container hover:bg-emerald-400 text-white px-5 py-2.5 rounded-full font-lexend font-semibold text-sm shadow-lg shadow-emerald-900/30 active:scale-95 transition-all">
+        Consultar especialista
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===================== SERVICE HERO ===================== -->
+  <section class="relative isolate hero-gradient overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-28">
+    <div class="absolute inset-0 particle-bg opacity-[0.30]"></div>
+    <div class="absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(70%_60%_at_72%_15%,#000,transparent)]"></div>
+    <div class="absolute -top-24 right-[-8%] h-[480px] w-[480px] rounded-full bg-emerald-500/20 blur-[120px]"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- breadcrumb -->
+      <nav data-reveal class="flex items-center gap-2 text-xs text-slate-400 mb-8 font-lexend">
+        <a href="index.html" class="hover:text-emerald-400 transition-colors">Início</a>
+        <span class="material-symbols-outlined text-[14px] text-slate-600">chevron_right</span>
+        <a href="index.html#servicos" class="hover:text-emerald-400 transition-colors">Serviços</a>
+        <span class="material-symbols-outlined text-[14px] text-slate-600">chevron_right</span>
+        <span class="text-slate-200">Tráfego Político</span>
+      </nav>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.02fr] gap-12 lg:gap-14 items-center">
+        <!-- LEFT -->
+        <div>
+          <div data-reveal class="flex flex-wrap items-center gap-3 mb-6">
+            <span class="inline-flex items-center gap-2 glass-emerald pl-2.5 pr-3.5 py-1.5 rounded-full">
+              <span class="material-symbols-outlined text-emerald-400 text-[18px]">ads_click</span>
+              <span class="font-lexend text-[11px] uppercase tracking-[0.16em] text-emerald-300">Tráfego pago eleitoral</span>
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-sunlight/15 text-amber-300 px-3 py-1.5 rounded-full font-lexend text-[11px] font-semibold uppercase tracking-wide">
+              <span class="material-symbols-outlined text-[16px]">bolt</span> Go-live 48h
+            </span>
+          </div>
+
+          <h1 data-reveal style="--reveal-delay:60ms" class="font-lexend font-bold text-white tracking-[-0.025em] text-[38px] leading-[1.08] lg:text-[50px] lg:leading-[1.05] mb-5">
+            Gestão de<br /><span class="text-emerald-400">Tráfego Político</span>
+          </h1>
+
+          <p data-reveal style="--reveal-delay:120ms" class="text-[17px] leading-[1.6] text-slate-300/90 max-w-[34rem] mb-8">
+            Meta Ads e Google Ads sob as regras do TSE, com segmentação por zona
+            eleitoral, idade e perfil. Cada real investido vira alcance qualificado —
+            e voto. Estrutura no ar em até 48 horas.
+          </p>
+
+          <!-- price -->
+          <div data-reveal style="--reveal-delay:160ms" class="flex items-end gap-6 mb-8">
+            <div>
+              <p class="text-[11px] uppercase tracking-wide text-slate-500 font-lexend mb-1">A partir de</p>
+              <p class="font-lexend font-bold text-white text-4xl tracking-[-0.02em] leading-none">
+                R$ 2.500
+              </p>
+            </div>
+            <div class="h-10 w-px bg-white/10 mb-1"></div>
+            <p class="text-xs text-slate-400 leading-snug mb-1 max-w-[12rem]">
+              Sem taxa de setup. <span class="text-emerald-400 font-semibold">Gestão + criativos</span> inclusos.
+            </p>
+          </div>
+
+          <div data-reveal style="--reveal-delay:200ms" class="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <a href="#contato" class="group inline-flex items-center gap-2 bg-primary-container hover:bg-emerald-400 text-white pl-7 pr-6 py-4 rounded-full font-lexend font-bold text-base shadow-xl shadow-emerald-900/40 transition-all">
+              Contratar agora
+              <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+            </a>
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-slate-300 hover:text-white font-lexend font-medium text-sm transition-colors">
+              <span class="material-symbols-outlined text-[20px] text-emerald-400">chat</span>
+              Tirar dúvidas no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT — campaign dashboard mock -->
+        <div data-reveal style="--reveal-delay:160ms" class="relative">
+          <div class="absolute -inset-6 bg-emerald-500/15 blur-3xl rounded-full"></div>
+          <div class="relative rounded-2xl overflow-hidden border border-white/[0.10] bg-slate-950/70 shadow-2xl shadow-emerald-950/50 backdrop-blur-xl">
+            <!-- chrome -->
+            <div class="flex items-center gap-2 px-4 h-10 border-b border-white/[0.06] bg-white/[0.02]">
+              <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+              <span class="h-2.5 w-2.5 rounded-full bg-white/20"></span>
+              <span class="ml-3 font-lexend text-[11px] tracking-wide text-slate-400">painel · tráfego</span>
+              <span class="ml-auto inline-flex items-center gap-1.5 text-[10px] font-lexend uppercase tracking-wider text-emerald-400">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span> otimizando
+              </span>
+            </div>
+
+            <div class="p-5">
+              <!-- platform tabs -->
+              <div class="flex items-center gap-2 mb-4">
+                <span class="inline-flex items-center gap-1.5 bg-emerald-500/15 text-emerald-300 px-3 py-1.5 rounded-lg font-lexend text-xs font-semibold">
+                  <span class="material-symbols-outlined text-[16px]">thumb_up</span> Meta Ads
+                </span>
+                <span class="inline-flex items-center gap-1.5 bg-white/[0.04] text-slate-400 px-3 py-1.5 rounded-lg font-lexend text-xs font-medium">
+                  <span class="material-symbols-outlined text-[16px]">search</span> Google Ads
+                </span>
+                <span class="ml-auto text-[10px] text-slate-500 font-lexend">Últimos 14 dias</span>
+              </div>
+
+              <!-- KPI tiles -->
+              <div class="grid grid-cols-2 gap-3 mb-5">
+                <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-3.5">
+                  <p class="text-[10px] uppercase tracking-wide text-slate-500 font-lexend mb-1.5">Investimento</p>
+                  <p class="font-lexend font-bold text-white text-xl leading-none">R$ 48,2k</p>
+                </div>
+                <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-3.5">
+                  <p class="text-[10px] uppercase tracking-wide text-slate-500 font-lexend mb-1.5">Alcance</p>
+                  <p class="font-lexend font-bold text-white text-xl leading-none">1,24M</p>
+                </div>
+                <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-3.5">
+                  <p class="text-[10px] uppercase tracking-wide text-slate-500 font-lexend mb-1.5">CTR médio</p>
+                  <p class="font-lexend font-bold text-emerald-400 text-xl leading-none">3,4%</p>
+                </div>
+                <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-3.5">
+                  <p class="text-[10px] uppercase tracking-wide text-slate-500 font-lexend mb-1.5">Custo / lead</p>
+                  <p class="font-lexend font-bold text-emerald-400 text-xl leading-none">R$ 0,82</p>
+                </div>
+              </div>
+
+              <!-- bar chart -->
+              <div class="rounded-xl bg-white/[0.03] border border-white/[0.06] p-4">
+                <div class="flex items-center justify-between mb-3">
+                  <p class="text-[11px] font-lexend font-semibold text-slate-300">Alcance por zona eleitoral</p>
+                  <span class="text-[10px] text-emerald-400 font-lexend font-semibold">+18% sem. ant.</span>
+                </div>
+                <div id="chart" class="flex items-end justify-between gap-2 h-24"></div>
+                <div class="flex items-center justify-between mt-2.5 text-[9px] text-slate-600 font-lexend">
+                  <span>Z-12</span><span>Z-24</span><span>Z-31</span><span>Z-47</span><span>Z-58</span><span>Z-63</span><span>Z-77</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- floating chip -->
+          <div class="float-chip absolute -right-3 -bottom-4 hidden lg:flex glass-emerald rounded-xl px-4 py-3 items-center gap-2.5 shadow-xl">
+            <span class="material-symbols-outlined text-emerald-300 text-[22px]">trending_up</span>
+            <div>
+              <p class="text-[10px] uppercase tracking-wide text-emerald-200/70 font-lexend">Intenção de voto</p>
+              <p class="font-lexend font-bold text-white text-base leading-none">+12,4% <span class="text-emerald-300 text-xs font-medium">em 21 dias</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== O QUE ESTÁ INCLUÍDO ===================== -->
+  <section class="bg-surface-cream py-24 lg:py-28">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div data-reveal class="max-w-2xl mb-14">
+        <span class="inline-flex items-center gap-2 text-emerald-700 font-lexend text-xs font-semibold uppercase tracking-[0.16em] mb-4">
+          <span class="h-px w-7 bg-emerald-500"></span> Entregáveis
+        </span>
+        <h2 class="font-lexend font-bold text-4xl lg:text-[42px] leading-[1.1] tracking-[-0.025em] text-text-deep mb-4">
+          Tudo que está incluído
+        </h2>
+        <p class="text-base lg:text-lg text-text-muted leading-relaxed">
+          Operação de tráfego completa — da estrutura técnica à otimização diária —
+          conduzida por especialistas em campanha eleitoral.
+        </p>
+      </div>
+
+      <div id="incluso-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section class="bg-white py-24 lg:py-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div data-reveal class="text-center max-w-2xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 text-emerald-700 font-lexend text-xs font-semibold uppercase tracking-[0.16em] mb-4">
+          <span class="h-px w-7 bg-emerald-500"></span> Processo
+        </span>
+        <h2 class="font-lexend font-bold text-4xl lg:text-[42px] leading-[1.1] tracking-[-0.025em] text-text-deep">
+          Do brief ao primeiro clique em 48h
+        </h2>
+      </div>
+
+      <div id="processo" class="relative grid grid-cols-1 md:grid-cols-4 gap-y-12 gap-x-6"></div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS / WAR ROOM ===================== -->
+  <section class="relative bg-slate-950 py-20 overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-[0.35]"></div>
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div data-reveal class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 text-center lg:text-left">
+        <div class="lg:px-2">
+          <p class="font-lexend font-bold text-4xl lg:text-5xl text-emerald-400 tracking-[-0.02em]">48h</p>
+          <p class="text-sm text-slate-400 mt-2 leading-snug">para a primeira campanha<br class="hidden lg:block" /> entrar no ar</p>
+        </div>
+        <div class="lg:px-2 lg:border-l lg:border-white/[0.06]">
+          <p class="font-lexend font-bold text-4xl lg:text-5xl text-emerald-400 tracking-[-0.02em]">-34%</p>
+          <p class="text-sm text-slate-400 mt-2 leading-snug">no custo por lead<br class="hidden lg:block" /> após otimização</p>
+        </div>
+        <div class="lg:px-2 lg:border-l lg:border-white/[0.06]">
+          <p class="font-lexend font-bold text-4xl lg:text-5xl text-emerald-400 tracking-[-0.02em]">100%</p>
+          <p class="text-sm text-slate-400 mt-2 leading-snug">criativos sob as regras<br class="hidden lg:block" /> do TSE</p>
+        </div>
+        <div class="lg:px-2 lg:border-l lg:border-white/[0.06]">
+          <p class="font-lexend font-bold text-4xl lg:text-5xl text-emerald-400 tracking-[-0.02em]">Diário</p>
+          <p class="text-sm text-slate-400 mt-2 leading-snug">acompanhamento e<br class="hidden lg:block" /> ajuste de verba</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROVA SOCIAL ===================== -->
+  <section class="bg-surface-low py-24 lg:py-28">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
+      <div data-reveal class="relative rounded-3xl overflow-hidden bg-slate-950 p-9 lg:p-11">
+        <div class="absolute inset-0 grid-bg opacity-[0.25]"></div>
+        <div class="relative">
+          <span class="material-symbols-outlined text-emerald-400 text-5xl mb-4 block">format_quote</span>
+          <p class="font-lexend text-white text-2xl lg:text-[28px] leading-[1.35] tracking-[-0.01em] mb-8">
+            "Saímos do zero ao topo do trending da nossa região em três semanas.
+            O tráfego virou intenção de voto medível — algo que nenhuma agência
+            tinha entregue antes."
+          </p>
+          <div class="flex items-center gap-3.5">
+            <span class="h-12 w-12 rounded-full bg-emerald-500/90 grid place-items-center font-lexend font-bold text-white">DC</span>
+            <div>
+              <p class="font-lexend font-semibold text-white text-sm">Diretor de Campanha</p>
+              <p class="text-xs text-slate-400">Candidato Municipal Executivo · Vinhedo-SP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-reveal style="--reveal-delay:100ms">
+        <h2 class="font-lexend font-bold text-3xl lg:text-[40px] leading-[1.12] tracking-[-0.025em] text-text-deep mb-5">
+          Feito para quem decide a campanha
+        </h2>
+        <p class="text-base lg:text-lg text-text-muted leading-relaxed mb-8">
+          Candidatos, diretores de campanha, marqueteiros e presidentes de partido
+          contam com um time que entende prazo eleitoral, regra do TSE e a urgência
+          de cada ciclo. Sem promessa vazia: dado, alcance e resultado.
+        </p>
+        <ul id="audiencia" class="space-y-3.5"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPLIANCE ===================== -->
+  <section id="compliance" class="relative bg-slate-950 py-20 overflow-hidden border-t border-white/[0.06]">
+    <div class="absolute inset-0 grid-bg opacity-[0.30]"></div>
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+      <div data-reveal class="text-center max-w-xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-2 glass-emerald px-4 py-2 rounded-full mb-5">
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+          <span class="font-lexend text-[11px] uppercase tracking-[0.16em] text-emerald-300">Dentro da lei</span>
+        </span>
+        <h2 class="font-lexend font-bold text-3xl lg:text-[34px] tracking-[-0.02em] text-white mb-3">Tráfego em conformidade total</h2>
+        <p class="text-slate-400 leading-relaxed">Anúncios eleitorais exigem rigor. Operamos blindados em cada etapa.</p>
+      </div>
+      <div id="compliance-grid" class="grid grid-cols-2 md:grid-cols-4 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ===================== FORM / CONTATO ===================== -->
+  <section id="contato" class="bg-surface-cream py-24 lg:py-28">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+      <div class="rounded-[32px] overflow-hidden border border-emerald-100 shadow-xl shadow-emerald-100/40 grid lg:grid-cols-[1fr_1.1fr]">
+        <!-- left info panel -->
+        <div class="relative bg-slate-950 p-9 lg:p-11 overflow-hidden">
+          <div class="absolute inset-0 hero-gradient opacity-90"></div>
+          <div class="absolute inset-0 particle-bg opacity-30"></div>
+          <div class="relative">
+            <h2 class="font-lexend font-bold text-white text-3xl lg:text-[34px] leading-[1.15] tracking-[-0.02em] mb-4">
+              Fale com um<br />especialista eleitoral
+            </h2>
+            <p class="text-slate-300/90 leading-relaxed mb-8 max-w-sm">
+              Resposta em minutos. Diagnóstico gratuito da sua campanha e proposta
+              de tráfego sob medida — antes do prazo apertar.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-center gap-3 text-slate-200 text-sm">
+                <span class="h-9 w-9 rounded-lg bg-emerald-500/15 grid place-items-center"><span class="material-symbols-outlined text-emerald-400 text-[20px]">bolt</span></span>
+                Go-live em até 48 horas
+              </li>
+              <li class="flex items-center gap-3 text-slate-200 text-sm">
+                <span class="h-9 w-9 rounded-lg bg-emerald-500/15 grid place-items-center"><span class="material-symbols-outlined text-emerald-400 text-[20px]">verified_user</span></span>
+                Conformidade TSE garantida
+              </li>
+              <li class="flex items-center gap-3 text-slate-200 text-sm">
+                <span class="h-9 w-9 rounded-lg bg-emerald-500/15 grid place-items-center"><span class="material-symbols-outlined text-emerald-400 text-[20px]">payments</span></span>
+                Sem taxa de setup
+              </li>
+            </ul>
+            <div class="mt-10 pt-7 border-t border-white/10 flex items-center gap-3">
+              <div class="flex -space-x-2.5">
+                <span class="h-9 w-9 rounded-full ring-2 ring-slate-900 bg-emerald-500/90 grid place-items-center font-lexend text-xs font-bold text-white">SC</span>
+                <span class="h-9 w-9 rounded-full ring-2 ring-slate-900 bg-emerald-700 grid place-items-center font-lexend text-xs font-bold text-white">MG</span>
+                <span class="h-9 w-9 rounded-full ring-2 ring-slate-900 bg-emerald-600 grid place-items-center font-lexend text-xs font-bold text-white">SP</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-snug"><span class="text-white font-semibold">+80 campanhas</span> já confiam na Eleicao.vip</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- right form -->
+        <div class="bg-white p-8 lg:p-11">
+          <form data-lead-form novalidate>
+            <div data-form-fields class="flex flex-col gap-5">
+              <div>
+                <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Nome completo</label>
+                <input type="text" required placeholder="Seu nome" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Você é</label>
+                  <select required class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition appearance-none">
+                    <option value="">Selecione…</option>
+                    <option>Candidato(a)</option>
+                    <option>Diretor(a) de campanha</option>
+                    <option>Marqueteiro(a) / Agência</option>
+                    <option>Presidente de partido</option>
+                    <option>Assessor(a) parlamentar</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">WhatsApp</label>
+                  <input type="tel" required placeholder="(00) 00000-0000" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Cargo pretendido</label>
+                  <select class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition appearance-none">
+                    <option value="">Selecione…</option>
+                    <option>Vereador(a)</option>
+                    <option>Prefeito(a)</option>
+                    <option>Dep. Estadual</option>
+                    <option>Dep. Federal</option>
+                    <option>Senador(a)</option>
+                    <option>Governador(a)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Município / UF</label>
+                  <input type="text" placeholder="Ex: Curitiba / PR" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Como podemos ajudar? <span class="text-slate-400 font-normal normal-case">(opcional)</span></label>
+                <textarea rows="3" placeholder="Conte sobre o momento da campanha…" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition resize-none"></textarea>
+              </div>
+
+              <button type="submit" class="group inline-flex items-center justify-center gap-2 w-full bg-primary-container hover:bg-emerald-400 text-white py-4 rounded-xl font-lexend font-bold text-base shadow-lg shadow-emerald-200 transition-all active:scale-[.99]">
+                Solicitar diagnóstico gratuito
+                <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+              </button>
+              <p class="text-[11px] text-slate-400 text-center leading-relaxed">
+                Ao enviar, você concorda com nossa política de privacidade (LGPD). Seus dados não são compartilhados.
+              </p>
+            </div>
+
+            <!-- success -->
+            <div data-form-success style="display:none" class="flex-col items-center text-center py-10">
+              <span class="h-16 w-16 rounded-full bg-emerald-100 grid place-items-center mb-5"><span class="material-symbols-outlined text-emerald-600 text-4xl">check</span></span>
+              <h3 class="font-lexend font-bold text-2xl text-text-deep mb-2">Recebido! 🎯</h3>
+              <p class="text-text-muted max-w-xs leading-relaxed">Um especialista eleitoral vai te chamar no WhatsApp em instantes com o diagnóstico.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-slate-950 border-t border-white/[0.06] py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <a href="index.html" class="inline-block"><img src="assets/logo_eleicao_vip.png" alt="Eleicao.vip" class="h-9 w-auto mx-auto mb-5 opacity-90" /></a>
+      <p class="font-lexend font-bold text-2xl tracking-[-0.02em] text-white mb-3">Tecnologia para a Democracia.</p>
+      <p class="text-sm text-slate-500">By <span class="text-emerald-400 font-semibold">Duobro</span> · 2026</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="fixed bottom-7 right-7 z-[100] h-[60px] w-[60px] rounded-full bg-primary-container grid place-items-center text-white shadow-2xl shadow-emerald-900/50 hover:scale-105 active:scale-95 transition-transform">
+    <span class="material-symbols-outlined text-3xl">smart_toy</span>
+    <span class="absolute -top-1 -right-1 bg-coral text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full font-lexend">IA</span>
+  </a>
+
+  <script>
+    /* ---- Bar chart ---- */
+    (function () {
+      var heights = [42, 58, 70, 52, 84, 66, 92];
+      var chart = document.getElementById('chart');
+      heights.forEach(function (h, i) {
+        var b = document.createElement('div');
+        b.className = 'chart-bar flex-1 rounded-t-md ' + (h >= 80 ? 'bg-emerald-400' : 'bg-emerald-500/55');
+        b.style.height = '0%';
+        chart.appendChild(b);
+        setTimeout(function () { b.style.height = h + '%'; }, 250 + i * 90);
+      });
+    })();
+
+    /* ---- Incluso (deliverables) ---- */
+    var INCLUSO = [
+      { icon:'thumb_up', t:'Meta Ads eleitoral', d:'Facebook e Instagram com identidade de pagador e regras do TSE configuradas.' },
+      { icon:'search', t:'Google Ads & YouTube', d:'Rede de pesquisa e vídeo para dominar buscas pelo seu nome e pautas.' },
+      { icon:'donut_small', t:'Segmentação por zona', d:'Públicos por zona eleitoral, idade, gênero e interesse — onde o voto está.' },
+      { icon:'palette', t:'Criativos inclusos', d:'Peças estáticas e vídeos curtos produzidos e testados em ciclos A/B.' },
+      { icon:'tune', t:'Otimização diária', d:'Realocação de verba para os anúncios e regiões de melhor performance.' },
+      { icon:'insights', t:'Relatório semanal', d:'Dashboard claro: alcance, custo por lead e impacto em intenção de voto.' },
+    ];
+    var ig = document.getElementById('incluso-grid');
+    INCLUSO.forEach(function (s, i) {
+      var d = document.createElement('div');
+      d.setAttribute('data-reveal', '');
+      d.style.setProperty('--reveal-delay', (i % 3) * 70 + 'ms');
+      d.className = 'group rounded-3xl bg-white border border-emerald-100/70 hover:border-emerald-300 hover:shadow-xl hover:-translate-y-1 shadow-sm p-7 transition-all';
+      d.innerHTML =
+        '<div class="h-12 w-12 rounded-2xl bg-emerald-50 text-emerald-600 grid place-items-center mb-5 group-hover:bg-primary-container group-hover:text-white transition-colors">' +
+          '<span class="material-symbols-outlined text-2xl">' + s.icon + '</span></div>' +
+        '<h3 class="font-lexend font-semibold text-lg text-text-deep mb-2">' + s.t + '</h3>' +
+        '<p class="text-sm text-text-muted leading-relaxed">' + s.d + '</p>';
+      ig.appendChild(d);
+    });
+
+    /* ---- Processo steps ---- */
+    var STEPS = [
+      { n:'01', t:'Diagnóstico', d:'Mapeamos território, adversários e orçamento em uma call de 30 min.' },
+      { n:'02', t:'Estrutura', d:'Montamos contas, pixels e públicos sob as regras do TSE.' },
+      { n:'03', t:'Veiculação', d:'Anúncios no ar em até 48h, com criativos prontos para testar.' },
+      { n:'04', t:'Otimização', d:'Ajuste diário de verba e relatório de impacto na intenção de voto.' },
+    ];
+    var pr = document.getElementById('processo');
+    STEPS.forEach(function (s, i) {
+      var d = document.createElement('div');
+      d.setAttribute('data-reveal', '');
+      d.style.setProperty('--reveal-delay', i * 120 + 'ms');
+      d.className = 'relative';
+      d.innerHTML =
+        '<div class="flex items-center gap-3 mb-5">' +
+          '<span class="font-lexend font-bold text-2xl text-emerald-500">' + s.n + '</span>' +
+          '<span class="flex-1 h-px bg-emerald-100"></span>' +
+        '</div>' +
+        '<h4 class="font-lexend font-semibold text-xl text-text-deep mb-2">' + s.t + '</h4>' +
+        '<p class="text-sm text-text-muted leading-relaxed">' + s.d + '</p>';
+      pr.appendChild(d);
+    });
+
+    /* ---- Audiência checklist ---- */
+    var AUD = ['Prazo eleitoral respeitado à risca', 'Verba protegida e realocada por performance', 'Compliance TSE em cada criativo', 'Relatório que o comitê entende'];
+    var au = document.getElementById('audiencia');
+    AUD.forEach(function (t) {
+      var li = document.createElement('li');
+      li.className = 'flex items-start gap-3 text-text-deep';
+      li.innerHTML = '<span class="material-symbols-outlined text-emerald-500 text-[22px] shrink-0">check_circle</span><span class="text-[15px] leading-snug pt-0.5">' + t + '</span>';
+      au.appendChild(li);
+    });
+
+    /* ---- Compliance cards ---- */
+    var COMP = [
+      { icon:'gavel', t:'Conformidade TSE', d:'Res. 23.732/2024 e identificação de pagador.' },
+      { icon:'shield', t:'LGPD & dados', d:'Públicos tratados com criptografia.' },
+      { icon:'fact_check', t:'Anúncio identificado', d:'Toda peça com "propaganda eleitoral".' },
+      { icon:'receipt_long', t:'Prestação de contas', d:'Notas e relatórios prontos para o jurídico.' },
+    ];
+    var cg = document.getElementById('compliance-grid');
+    COMP.forEach(function (s, i) {
+      var d = document.createElement('div');
+      d.setAttribute('data-reveal', '');
+      d.style.setProperty('--reveal-delay', (i % 4) * 70 + 'ms');
+      d.className = 'glass rounded-2xl p-6 text-center';
+      d.innerHTML =
+        '<div class="h-12 w-12 mx-auto mb-4 rounded-xl bg-emerald-500/10 grid place-items-center"><span class="material-symbols-outlined text-emerald-400 text-2xl">' + s.icon + '</span></div>' +
+        '<h4 class="font-lexend font-semibold text-sm text-white mb-1.5">' + s.t + '</h4>' +
+        '<p class="text-xs text-slate-400 leading-relaxed">' + s.d + '</p>';
+      cg.appendChild(d);
+    });
+  </script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
