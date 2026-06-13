@@ -86,8 +86,21 @@
         if (bad) valid = false;
       });
       if (!valid) return;
-      form.querySelector('[data-form-fields]').style.display = 'none';
-      if (ok) ok.style.display = 'flex';
+
+      var fd = new FormData(form);
+      var data = {};
+      fd.forEach(function(v, k) { data[k] = v; });
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function() {
+        form.querySelector('[data-form-fields]').style.display = 'none';
+        if (ok) ok.style.display = 'flex';
+      }).catch(function() {
+        alert('Erro ao enviar. Tente novamente.');
+      });
     });
     form.querySelectorAll('input,select,textarea').forEach(function (f) {
       f.addEventListener('input', function () {
