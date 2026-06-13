@@ -120,7 +120,7 @@
               Contratar agora
               <span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
             </a>
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-slate-300 hover:text-white font-lexend font-medium text-sm transition-colors">
+            <a href="https://wa.me/5511965836064" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-slate-300 hover:text-white font-lexend font-medium text-sm transition-colors">
               <span class="material-symbols-outlined text-[20px] text-emerald-400">chat</span>
               Tirar dúvidas no WhatsApp
             </a>
@@ -357,17 +357,18 @@
 
         <!-- right form -->
         <div class="bg-white p-8 lg:p-11">
-          <form data-lead-form novalidate>
+          <form data-lead-form action="https://webn8n.duobro.com.br/webhook/eleicao-vip-lead" method="POST" novalidate>
+            <input type="hidden" name="source" value="eleicao.vip" />
             <div data-form-fields class="flex flex-col gap-5">
               <div>
                 <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Nome completo</label>
-                <input type="text" required placeholder="Seu nome" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
+                <input type="text" name="nome" required placeholder="Seu nome" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
               </div>
 
               <div class="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Você é</label>
-                  <select required class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition appearance-none">
+                  <select name="perfil" required class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition appearance-none">
                     <option value="">Selecione…</option>
                     <option>Candidato(a)</option>
                     <option>Diretor(a) de campanha</option>
@@ -378,16 +379,14 @@
                 </div>
                 <div>
                   <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">WhatsApp</label>
-                  <input type="tel" required placeholder="(00) 00000-0000" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
+                  <input type="tel" name="whatsapp" required placeholder="(00) 00000-0000" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
                 </div>
               </div>
 
               <div class="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Cargo pretendido</label>
-                  <select class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition appearance-none">
-                    <option value="">Selecione…</option>
-                    <option>Vereador(a)</option>
+                  <select name="cargo" class="w-full rounded-xl border
                     <option>Prefeito(a)</option>
                     <option>Dep. Estadual</option>
                     <option>Dep. Federal</option>
@@ -397,13 +396,13 @@
                 </div>
                 <div>
                   <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Município / UF</label>
-                  <input type="text" placeholder="Ex: Curitiba / PR" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
+                  <input type="text" name="municipio" placeholder="Ex: Curitiba / PR" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition" />
                 </div>
               </div>
 
               <div>
                 <label class="block text-xs font-lexend font-semibold text-text-deep uppercase tracking-wide mb-2">Como podemos ajudar? <span class="text-slate-400 font-normal normal-case">(opcional)</span></label>
-                <textarea rows="3" placeholder="Conte sobre o momento da campanha…" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition resize-none"></textarea>
+                <textarea name="mensagem" rows="3" placeholder="Conte sobre o momento da campanha…" class="w-full rounded-xl border border-slate-200 bg-surface-cream px-4 py-3.5 text-sm text-text-deep placeholder:text-slate-400 outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-100 transition resize-none"></textarea>
               </div>
 
               <button type="submit" class="group inline-flex items-center justify-center gap-2 w-full bg-primary-container hover:bg-emerald-400 text-white py-4 rounded-xl font-lexend font-bold text-base shadow-lg shadow-emerald-200 transition-all active:scale-[.99]">
@@ -436,7 +435,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="fixed bottom-7 right-7 z-[100] h-[60px] w-[60px] rounded-full bg-primary-container grid place-items-center text-white shadow-2xl shadow-emerald-900/50 hover:scale-105 active:scale-95 transition-transform">
+  <a href="https://wa.me/5511965836064" target="_blank" rel="noopener" class="fixed bottom-7 right-7 z-[100] h-[60px] w-[60px] rounded-full bg-primary-container grid place-items-center text-white shadow-2xl shadow-emerald-900/50 hover:scale-105 active:scale-95 transition-transform">
     <span class="material-symbols-outlined text-3xl">smart_toy</span>
     <span class="absolute -top-1 -right-1 bg-coral text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full font-lexend">IA</span>
   </a>
